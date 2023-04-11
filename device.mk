@@ -22,6 +22,11 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+## Manually added-in apps
+# KernelSU: for Stellaris kernel
+PRODUCT_PACKAGES += \
+    KernelSU
+
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -29,7 +34,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lmodroid
 
 PRODUCT_PACKAGES += \
     OPlusFrameworksResTarget \
